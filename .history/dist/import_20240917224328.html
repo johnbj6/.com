@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Tabbed Login Forms</title>
+  </head>
+  <body>
+    <nav
+      class="relative z-0 flex border rounded-xl overflow-hidden dark:border-neutral-700"
+      aria-label="Tabs"
+      role="tablist"
+      aria-orientation="horizontal"
+    >
+      <button
+        type="button"
+        class="hs-tab-active:border-b-blue-600 hs-tab-active:text-gray-900 dark:hs-tab-active:text-white relative dark:hs-tab-active:border-b-blue-600 min-w-0 flex-1 bg-white first:border-s-0 border-s border-b-2 py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-l-neutral-700 dark:border-b-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-400 active"
+        id="bar-with-underline-item-1"
+        aria-selected="true"
+        data-hs-tab="#bar-with-underline-1"
+        aria-controls="bar-with-underline-1"
+        role="tab"
+      >
+        Tab 1
+      </button>
+      <button
+        type="button"
+        class="hs-tab-active:border-b-blue-600 hs-tab-active:text-gray-900 dark:hs-tab-active:text-white relative dark:hs-tab-active:border-b-blue-600 min-w-0 flex-1 bg-white first:border-s-0 border-s border-b-2 py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-l-neutral-700 dark:border-b-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-400"
+        id="bar-with-underline-item-2"
+        aria-selected="false"
+        data-hs-tab="#bar-with-underline-2"
+        aria-controls="bar-with-underline-2"
+        role="tab"
+      >
+        Tab 2
+      </button>
+      <button
+        type="button"
+        class="hs-tab-active:border-b-blue-600 hs-tab-active:text-gray-900 dark:hs-tab-active:text-white relative dark:hs-tab-active:border-b-blue-600 min-w-0 flex-1 bg-white first:border-s-0 border-s border-b-2 py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-l-neutral-700 dark:border-b-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-400"
+        id="bar-with-underline-item-3"
+        aria-selected="false"
+        data-hs-tab="#bar-with-underline-3"
+        aria-controls="bar-with-underline-3"
+        role="tab"
+      >
+        Tab 3
+      </button>
+    </nav>
+
+    <div class="mt-3">
+      <div
+        id="bar-with-underline-1"
+        role="tabpanel"
+        aria-labelledby="bar-with-underline-item-1"
+      >
+        <p class="text-gray-500 dark:text-neutral-400">
+          This is the
+          <em class="font-semibold text-gray-800 dark:text-neutral-200"
+            >first</em
+          >
+          item's tab body.
+        </p>
+      </div>
+
+      <div
+        id="bar-with-underline-3"
+        class="hidden"
+        role="tabpanel"
+        aria-labelledby="bar-with-underline-item-3"
+      ></div>
+    </div>
+    <script
+      src="/node_modules/preline/dist/preline.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

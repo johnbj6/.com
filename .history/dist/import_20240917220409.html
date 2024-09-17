@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabbed Interface</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.7/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="w-full max-w-3xl mx-auto">
+      <div class="bg-white shadow-md rounded-md">
+        <div class="border-b border-gray-200">
+          <ul class="flex">
+            <li class="w-1/3">
+              <button
+                id="tab1"
+                class="tab-button px-4 py-2 text-blue-500 border-b-2 border-transparent hover:text-blue-700 focus:outline-none"
+              >
+                Tab 1
+              </button>
+            </li>
+            <li class="w-1/3">
+              <button
+                id="tab2"
+                class="tab-button px-4 py-2 text-gray-600 border-b-2 border-transparent hover:text-gray-800 focus:outline-none"
+              >
+                Tab 2
+              </button>
+            </li>
+            <li class="w-1/3">
+              <button
+                id="tab3"
+                class="tab-button px-4 py-2 text-gray-600 border-b-2 border-transparent hover:text-gray-800 focus:outline-none"
+              >
+                Tab 3
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="p-4">
+          <div id="content1" class="tab-content active">
+            <h2 class="text-xl font-semibold mb-4">Content for Tab 1</h2>
+            <p>This is the content for the first tab.</p>
+          </div>
+          <div id="content2" class="tab-content">
+            <h2 class="text-xl font-semibold mb-4">Content for Tab 2</h2>
+            <p>This is the content for the second tab.</p>
+          </div>
+          <div id="content3" class="tab-content">
+            <h2 class="text-xl font-semibold mb-4">Content for Tab 3</h2>
+            <p>This is the content for the third tab.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".tab-button").forEach((button) => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll(".tab-button").forEach((btn) => {
+            btn.classList.remove("text-blue-500");
+            btn.classList.add("text-gray-600");
+          });
+          button.classList.add("text-blue-500");
+          button.classList.remove("text-gray-600");
+
+          document.querySelectorAll(".tab-content").forEach((content) => {
+            content.classList.remove("active");
+          });
+
+          document
+            .getElementById("content" + button.id.charAt(button.id.length - 1))
+            .classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
