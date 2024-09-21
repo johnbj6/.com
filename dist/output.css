@@ -1163,6 +1163,10 @@ input:checked + .toggle-bg {
   margin-bottom: 0.5rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .mb-9 {
   margin-bottom: 2.25rem;
 }
@@ -1173,6 +1177,10 @@ input:checked + .toggle-bg {
 
 .mt-0 {
   margin-top: 0px;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .mt-2 {
@@ -1874,6 +1882,11 @@ input:checked + .toggle-bg {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(240 82 82 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2233,16 +2246,6 @@ id="myForm"
   border-color: rgb(250 202 21 / var(--tw-border-opacity));
 }
 
-.dark\:border-b-neutral-700:is(.dark *) {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(64 64 64 / var(--tw-border-opacity));
-}
-
-.dark\:border-l-neutral-700:is(.dark *) {
-  --tw-border-opacity: 1;
-  border-left-color: rgb(64 64 64 / var(--tw-border-opacity));
-}
-
 .dark\:bg-blue-500:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(63 131 248 / var(--tw-bg-opacity));
@@ -2365,11 +2368,6 @@ id="myForm"
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
-.dark\:hover\:bg-neutral-700:hover:is(.dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(64 64 64 / var(--tw-bg-opacity));
-}
-
 .dark\:hover\:bg-neutral-800:hover:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(38 38 38 / var(--tw-bg-opacity));
@@ -2393,11 +2391,6 @@ id="myForm"
 .dark\:hover\:text-neutral-200:hover:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(229 229 229 / var(--tw-text-opacity));
-}
-
-.dark\:hover\:text-neutral-400:hover:is(.dark *) {
-  --tw-text-opacity: 1;
-  color: rgb(163 163 163 / var(--tw-text-opacity));
 }
 
 .dark\:hover\:text-white:hover:is(.dark *) {
